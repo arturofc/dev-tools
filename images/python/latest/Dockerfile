@@ -10,14 +10,11 @@ RUN apk --no-cache --update add \
     bash \
     curl \
     git \
-    vim 
+    vim \
+    gcc \
+    python3-dev
 
-# helpful pip packages
-RUN python -m pip install --upgrade pip && python -m pip install \
-    pipenv \
-    pytest
-
-# install poetry: 
+RUN pip install --upgrade pip
 
 # Shell entrypoint
  ENTRYPOINT [ "/bin/bash" ]
