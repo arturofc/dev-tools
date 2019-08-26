@@ -14,7 +14,9 @@ RUN apk --no-cache --update add \
     gcc \
     python3-dev
 
-RUN pip install --upgrade pip
+# helpful pip packages
+RUN pip install --upgrade pip && pip install \
+    pytest
 
 # Shell entrypoint
  ENTRYPOINT [ "/bin/bash" ]
